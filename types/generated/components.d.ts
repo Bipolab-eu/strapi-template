@@ -40,8 +40,8 @@ export interface BlocksHero extends Struct.ComponentSchema {
   };
   attributes: {
     cover: Schema.Attribute.Media<'images'>;
-    linkTitle: Schema.Attribute.String;
-    linkUrl: Schema.Attribute.String;
+    linkHref: Schema.Attribute.String;
+    linkLabel: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -64,7 +64,7 @@ export interface BlocksTestimonial extends Struct.ComponentSchema {
   };
   attributes: {
     author: Schema.Attribute.String;
-    quote: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
   };
 }
 
@@ -74,7 +74,7 @@ export interface BlocksVideo extends Struct.ComponentSchema {
     displayName: 'video';
   };
   attributes: {
-    file: Schema.Attribute.Media<'videos'>;
+    url: Schema.Attribute.String;
   };
 }
 

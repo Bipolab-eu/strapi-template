@@ -5,10 +5,10 @@
   },
   "options": {},
   "attributes": {
-    "author": {
-      "type": "string"
-    },
     "quote": {
+      "type": "text"
+    },
+    "author": {
       "type": "string"
     }
   },

@@ -5,12 +5,8 @@
   },
   "options": {},
   "attributes": {
-    "file": {
-      "allowedTypes": [
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false
+    "url": {
+      "type": "string"
     }
   }
 }

@@ -6,11 +6,11 @@
   "options": {},
   "attributes": {
     "cover": {
+      "type": "media",
+      "multiple": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
       "type": "string"
@@ -18,10 +18,10 @@
     "subtitle": {
       "type": "string"
     },
-    "linkTitle": {
+    "linkLabel": {
       "type": "string"
     },
-    "linkUrl": {
+    "linkHref": {
       "type": "string"
     }
   }

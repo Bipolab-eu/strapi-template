@@ -16,15 +16,15 @@
       "type": "string",
       "unique": true
     },
-    "content": {
+    "blocks": {
       "type": "dynamiczone",
       "components": [
+        "blocks.video",
+        "blocks.rich-text",
         "blocks.hero",
         "blocks.header",
-        "blocks.accordion",
         "blocks.carousel",
-        "blocks.rich-text",
-        "blocks.video",
+        "blocks.accordion",
         "blocks.testimonial"
       ]
     }
