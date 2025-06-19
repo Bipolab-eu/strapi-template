@@ -42,8 +42,18 @@ export interface BlocksHero extends Struct.ComponentSchema {
     cover: Schema.Attribute.Media<'images'>;
     linkHref: Schema.Attribute.String;
     linkLabel: Schema.Attribute.String;
-    subtitle: Schema.Attribute.String;
+    subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksPost extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_posts';
+  info: {
+    displayName: 'post';
+  };
+  attributes: {
+    posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
   };
 }
 
@@ -140,6 +150,7 @@ declare module '@strapi/strapi' {
       'blocks.carousel': BlocksCarousel;
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
+      'blocks.post': BlocksPost;
       'blocks.rich-text': BlocksRichText;
       'blocks.testimonial': BlocksTestimonial;
       'blocks.video': BlocksVideo;

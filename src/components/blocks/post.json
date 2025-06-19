@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_posts",
+  "info": {
+    "displayName": "post"
+  },
+  "options": {},
+  "attributes": {
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    }
+  },
+  "config": {}
+}
