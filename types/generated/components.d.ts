@@ -6,8 +6,11 @@ export interface BlocksAccordion extends Struct.ComponentSchema {
     displayName: 'accordion';
   };
   attributes: {
+    accordions: Schema.Attribute.Component<'elements.accordion-item', true>;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['default', 'variant1']> &
+      Schema.Attribute.DefaultTo<'default'>;
   };
 }
 
@@ -92,6 +95,17 @@ export interface BlocksVideo extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsAccordionItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_accordion_items';
+  info: {
+    displayName: 'accordion item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedOpenGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_open_graphs';
   info: {
@@ -154,6 +168,7 @@ declare module '@strapi/strapi' {
       'blocks.rich-text': BlocksRichText;
       'blocks.testimonial': BlocksTestimonial;
       'blocks.video': BlocksVideo;
+      'elements.accordion-item': ElementsAccordionItem;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
     }

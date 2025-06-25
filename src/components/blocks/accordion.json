@@ -10,6 +10,19 @@
     },
     "description": {
       "type": "text"
+    },
+    "accordions": {
+      "type": "component",
+      "component": "elements.accordion-item",
+      "repeatable": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "default",
+      "enum": [
+        "default",
+        "variant1"
+      ]
     }
   }
 }
