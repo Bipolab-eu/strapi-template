@@ -14,6 +14,18 @@ export interface BlocksAccordion extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksCard extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
+    variant: Schema.Attribute.Enumeration<['default', 'variant1']> &
+      Schema.Attribute.DefaultTo<'default'>;
+  };
+}
+
 export interface BlocksCarousel extends Struct.ComponentSchema {
   collectionName: 'components_blocks_carousels';
   info: {
@@ -137,7 +149,6 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
   attributes: {
     canonicalURL: Schema.Attribute.String;
-    keywords: Schema.Attribute.Text;
     metaDescription: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -161,6 +172,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.accordion': BlocksAccordion;
+      'blocks.card': BlocksCard;
       'blocks.carousel': BlocksCarousel;
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;

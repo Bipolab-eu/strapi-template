@@ -11,10 +11,22 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "title": {
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": false
     },
     "slug": {
       "type": "uid",

@@ -26,7 +26,8 @@
         "blocks.carousel",
         "blocks.accordion",
         "blocks.testimonial",
-        "blocks.post"
+        "blocks.post",
+        "blocks.card"
       ]
     },
     "seo": {

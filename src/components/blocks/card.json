@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_cards",
+  "info": {
+    "displayName": "card"
+  },
+  "options": {},
+  "attributes": {
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "default",
+      "enum": [
+        "default",
+        "variant1"
+      ]
+    }
+  },
+  "config": {}
+}
