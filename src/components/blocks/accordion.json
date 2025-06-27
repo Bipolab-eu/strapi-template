@@ -14,7 +14,8 @@
     "accordions": {
       "type": "component",
       "component": "elements.accordion-item",
-      "repeatable": true
+      "repeatable": true,
+      "required": true
     },
     "variant": {
       "type": "enumeration",

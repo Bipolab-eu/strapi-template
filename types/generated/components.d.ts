@@ -6,7 +6,8 @@ export interface BlocksAccordion extends Struct.ComponentSchema {
     displayName: 'accordion';
   };
   attributes: {
-    accordions: Schema.Attribute.Component<'elements.accordion-item', true>;
+    accordions: Schema.Attribute.Component<'elements.accordion-item', true> &
+      Schema.Attribute.Required;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
