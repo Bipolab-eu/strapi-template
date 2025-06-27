@@ -10,6 +10,7 @@ export interface BlocksAccordion extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }
@@ -22,6 +23,7 @@ export interface BlocksCard extends Struct.ComponentSchema {
   attributes: {
     posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }
@@ -34,6 +36,7 @@ export interface BlocksCarousel extends Struct.ComponentSchema {
   attributes: {
     media: Schema.Attribute.Media<'images', true>;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }
@@ -48,6 +51,7 @@ export interface BlocksHeader extends Struct.ComponentSchema {
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }
@@ -64,6 +68,7 @@ export interface BlocksHero extends Struct.ComponentSchema {
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }
@@ -76,6 +81,7 @@ export interface BlocksRichText extends Struct.ComponentSchema {
   attributes: {
     text: Schema.Attribute.Blocks;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }
@@ -93,6 +99,7 @@ export interface BlocksTestimonial extends Struct.ComponentSchema {
     >;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }
@@ -105,6 +112,7 @@ export interface BlocksVideo extends Struct.ComponentSchema {
   attributes: {
     url: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
 }

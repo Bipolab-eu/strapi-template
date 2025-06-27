@@ -12,6 +12,7 @@
     },
     "variant": {
       "type": "enumeration",
+      "required": true,
       "default": "default",
       "enum": [
         "default"
