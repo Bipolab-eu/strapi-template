@@ -14,8 +14,7 @@
       "type": "enumeration",
       "default": "default",
       "enum": [
-        "default",
-        "variant1"
+        "default"
       ]
     }
   },

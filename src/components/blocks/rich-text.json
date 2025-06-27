@@ -7,6 +7,13 @@
   "attributes": {
     "text": {
       "type": "blocks"
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "default",
+      "enum": [
+        "default"
+      ]
     }
   }
 }

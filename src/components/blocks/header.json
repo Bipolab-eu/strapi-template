@@ -11,6 +11,13 @@
     },
     "subtitle": {
       "type": "text"
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "default",
+      "enum": [
+        "default"
+      ]
     }
   }
 }

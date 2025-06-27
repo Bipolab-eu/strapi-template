@@ -6,11 +6,18 @@
   "options": {},
   "attributes": {
     "media": {
+      "type": "media",
+      "multiple": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "default",
+      "enum": [
+        "default"
+      ]
     }
   }
 }

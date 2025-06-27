@@ -7,6 +7,13 @@
   "attributes": {
     "url": {
       "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "default",
+      "enum": [
+        "default"
+      ]
     }
   }
 }
