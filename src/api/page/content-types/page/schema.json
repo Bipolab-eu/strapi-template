@@ -14,7 +14,13 @@
   "attributes": {
     "title": {
       "type": "string",
+      "required": true,
       "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     },
     "blocks": {
       "type": "dynamiczone",
@@ -26,7 +32,6 @@
         "blocks.carousel",
         "blocks.accordion",
         "blocks.testimonial",
-        "blocks.post",
         "blocks.card"
       ]
     },

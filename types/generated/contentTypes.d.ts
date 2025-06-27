@@ -394,7 +394,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.carousel',
         'blocks.accordion',
         'blocks.testimonial',
-        'blocks.post',
         'blocks.card',
       ]
     >;
@@ -406,7 +405,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
-    title: Schema.Attribute.String & Schema.Attribute.Unique;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -435,6 +437,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         'blocks.accordion',
       ]
     >;
+    category: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
     cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

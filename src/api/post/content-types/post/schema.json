@@ -24,14 +24,19 @@
       "required": true,
       "unique": true
     },
-    "excerpt": {
-      "type": "text",
-      "required": false
-    },
     "slug": {
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
     },
     "blocks": {
       "type": "dynamiczone",
