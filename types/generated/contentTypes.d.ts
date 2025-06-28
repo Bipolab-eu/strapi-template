@@ -438,7 +438,6 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       ]
     >;
     category: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
-    cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -449,6 +448,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    thumbnail: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
