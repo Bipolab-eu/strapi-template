@@ -32,7 +32,8 @@
         "blocks.carousel",
         "blocks.accordion",
         "blocks.testimonial",
-        "blocks.card"
+        "blocks.card",
+        "blocks.cta"
       ]
     },
     "seo": {

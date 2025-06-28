@@ -395,6 +395,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.accordion',
         'blocks.testimonial',
         'blocks.card',
+        'blocks.cta',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

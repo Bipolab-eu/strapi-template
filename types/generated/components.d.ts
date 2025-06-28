@@ -42,6 +42,20 @@ export interface BlocksCarousel extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksCta extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_ctas';
+  info: {
+    displayName: 'cta';
+  };
+  attributes: {
+    cover: Schema.Attribute.Media<'images'>;
+    textEditor: Schema.Attribute.RichText;
+    variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+  };
+}
+
 export interface BlocksHeader extends Struct.ComponentSchema {
   collectionName: 'components_blocks_headers';
   info: {
@@ -63,7 +77,7 @@ export interface BlocksHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
-    cover: Schema.Attribute.Media<'images'>;
+    cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     linkHref: Schema.Attribute.String;
     linkLabel: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
@@ -185,6 +199,7 @@ declare module '@strapi/strapi' {
       'blocks.accordion': BlocksAccordion;
       'blocks.card': BlocksCard;
       'blocks.carousel': BlocksCarousel;
+      'blocks.cta': BlocksCta;
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
       'blocks.rich-text': BlocksRichText;
