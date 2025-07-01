@@ -78,11 +78,11 @@ export interface BlocksHero extends Struct.ComponentSchema {
   };
   attributes: {
     cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    linkHref: Schema.Attribute.String;
+    linkHref: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#'>;
     linkLabel: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-    variant: Schema.Attribute.Enumeration<['default']> &
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    variant: Schema.Attribute.Enumeration<['default', 'variant1']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };

@@ -14,7 +14,8 @@
       ]
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "subtitle": {
       "type": "text"
@@ -23,14 +24,16 @@
       "type": "string"
     },
     "linkHref": {
-      "type": "string"
+      "type": "string",
+      "default": "#"
     },
     "variant": {
       "type": "enumeration",
       "required": true,
       "default": "default",
       "enum": [
-        "default"
+        "default",
+        "variant1"
       ]
     }
   }
