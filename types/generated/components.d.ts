@@ -58,6 +58,20 @@ export interface BlocksCta extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksForm extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_forms';
+  info: {
+    displayName: 'form';
+  };
+  attributes: {
+    forms: Schema.Attribute.Component<'elements.input', true> &
+      Schema.Attribute.Required;
+    variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+  };
+}
+
 export interface BlocksHeader extends Struct.ComponentSchema {
   collectionName: 'components_blocks_headers';
   info: {
@@ -145,6 +159,24 @@ export interface ElementsAccordionItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsInput extends Struct.ComponentSchema {
+  collectionName: 'components_elements_inputs';
+  info: {
+    displayName: 'input';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    placeholder: Schema.Attribute.String;
+    required: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    type: Schema.Attribute.Enumeration<['email', 'tel', 'text']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'text'>;
+  };
+}
+
 export interface SharedOpenGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_open_graphs';
   info: {
@@ -202,12 +234,14 @@ declare module '@strapi/strapi' {
       'blocks.card': BlocksCard;
       'blocks.carousel': BlocksCarousel;
       'blocks.cta': BlocksCta;
+      'blocks.form': BlocksForm;
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
       'blocks.rich-text': BlocksRichText;
       'blocks.testimonial': BlocksTestimonial;
       'blocks.video': BlocksVideo;
       'elements.accordion-item': ElementsAccordionItem;
+      'elements.input': ElementsInput;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
     }

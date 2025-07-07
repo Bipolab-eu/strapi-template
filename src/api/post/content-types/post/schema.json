@@ -11,14 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "thumbnail": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "title": {
       "type": "string",
       "required": true,
@@ -28,6 +20,14 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "excerpt": {
       "type": "text",
