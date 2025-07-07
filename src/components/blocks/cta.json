@@ -8,12 +8,14 @@
     "cover": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
     },
-    "textEditor": {
-      "type": "richtext"
+    "text": {
+      "type": "blocks",
+      "required": true
     },
     "variant": {
       "type": "enumeration",

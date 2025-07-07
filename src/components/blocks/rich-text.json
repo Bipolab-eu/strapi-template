@@ -6,7 +6,8 @@
   "options": {},
   "attributes": {
     "text": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
     "variant": {
       "type": "enumeration",

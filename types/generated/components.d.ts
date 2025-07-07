@@ -35,7 +35,9 @@ export interface BlocksCarousel extends Struct.ComponentSchema {
     displayName: 'carousel';
   };
   attributes: {
-    media: Schema.Attribute.Media<'images', true>;
+    media: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
@@ -48,8 +50,8 @@ export interface BlocksCta extends Struct.ComponentSchema {
     displayName: 'cta';
   };
   attributes: {
-    cover: Schema.Attribute.Media<'images'>;
-    textEditor: Schema.Attribute.RichText;
+    cover: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    text: Schema.Attribute.Blocks & Schema.Attribute.Required;
     variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
@@ -64,7 +66,7 @@ export interface BlocksHeader extends Struct.ComponentSchema {
   };
   attributes: {
     subtitle: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
@@ -94,7 +96,7 @@ export interface BlocksRichText extends Struct.ComponentSchema {
     displayName: 'rich text';
   };
   attributes: {
-    text: Schema.Attribute.Blocks;
+    text: Schema.Attribute.Blocks & Schema.Attribute.Required;
     variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;

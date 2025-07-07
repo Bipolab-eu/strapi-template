@@ -5,9 +5,16 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
     "media": {
       "type": "media",
       "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
