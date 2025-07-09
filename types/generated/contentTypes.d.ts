@@ -422,12 +422,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         };
       }>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    thumbnail: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &

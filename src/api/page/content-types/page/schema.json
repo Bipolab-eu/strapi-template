@@ -31,18 +31,6 @@
       "targetField": "title",
       "required": true
     },
-    "thumbnail": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "blocks": {
       "type": "dynamiczone",
       "pluginOptions": {
