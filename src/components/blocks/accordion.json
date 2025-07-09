@@ -11,9 +11,9 @@
     "description": {
       "type": "text"
     },
-    "accordions": {
+    "accordionElements": {
       "type": "component",
-      "component": "elements.accordion-item",
+      "component": "elements.accordion-elements",
       "repeatable": true,
       "required": true
     },
