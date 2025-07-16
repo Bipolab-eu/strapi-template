@@ -52,6 +52,7 @@ export default ({ env }) => ({
       // playbackSigningId: env('SIGNING_KEY_ID'),
       // playbackSigningSecret: env('SIGNING_KEY_PRIVATE_KEY'),
     }
-  }
+  },
   //
 });
+

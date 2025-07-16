@@ -120,24 +120,6 @@ export interface BlocksRichText extends Struct.ComponentSchema {
   };
 }
 
-export interface BlocksTestimonial extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_testimonials';
-  info: {
-    displayName: 'testimonial';
-  };
-  attributes: {
-    subtitle: Schema.Attribute.Text;
-    testimonials: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::testimonial.testimonial'
-    >;
-    title: Schema.Attribute.String;
-    variant: Schema.Attribute.Enumeration<['default']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'default'>;
-  };
-}
-
 export interface BlocksVideo extends Struct.ComponentSchema {
   collectionName: 'components_blocks_videos';
   info: {
@@ -241,7 +223,6 @@ declare module '@strapi/strapi' {
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
       'blocks.rich-text': BlocksRichText;
-      'blocks.testimonial': BlocksTestimonial;
       'blocks.video': BlocksVideo;
       'elements.accordion-elements': ElementsAccordionElements;
       'elements.input': ElementsInput;
