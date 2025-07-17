@@ -39,7 +39,6 @@
         }
       },
       "components": [
-        "blocks.video",
         "blocks.rich-text",
         "blocks.hero",
         "blocks.header",

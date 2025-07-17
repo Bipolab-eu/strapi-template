@@ -101,7 +101,7 @@ export interface BlocksHero extends Struct.ComponentSchema {
     linkURL: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    variant: Schema.Attribute.Enumeration<['default', 'variant1']> &
+    variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
   };
@@ -114,19 +114,6 @@ export interface BlocksRichText extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    variant: Schema.Attribute.Enumeration<['default']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'default'>;
-  };
-}
-
-export interface BlocksVideo extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_videos';
-  info: {
-    displayName: 'video';
-  };
-  attributes: {
-    url: Schema.Attribute.String;
     variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
@@ -223,7 +210,6 @@ declare module '@strapi/strapi' {
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
       'blocks.rich-text': BlocksRichText;
-      'blocks.video': BlocksVideo;
       'elements.accordion-elements': ElementsAccordionElements;
       'elements.input': ElementsInput;
       'shared.open-graph': SharedOpenGraph;
