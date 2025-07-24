@@ -21,7 +21,7 @@
         "blocks.cta",
         "blocks.carousel",
         "blocks.card",
-        "blocks.accordion"
+        "blocks.list"
       ]
     },
     "seo": {

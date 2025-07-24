@@ -43,10 +43,10 @@
         "blocks.hero",
         "blocks.header",
         "blocks.carousel",
-        "blocks.accordion",
         "blocks.card",
         "blocks.cta",
-        "blocks.form"
+        "blocks.form",
+        "blocks.list"
       ]
     },
     "seo": {

@@ -45,7 +45,9 @@
         "blocks.hero",
         "blocks.header",
         "blocks.carousel",
-        "blocks.accordion"
+        "blocks.list",
+        "blocks.form",
+        "blocks.cta"
       ]
     },
     "seo": {

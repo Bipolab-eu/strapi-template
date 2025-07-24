@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_list_elements",
+  "info": {
+    "displayName": "listElements"
+  },
+  "options": {},
+  "attributes": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

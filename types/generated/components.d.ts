@@ -1,24 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface BlocksAccordion extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_accordions';
-  info: {
-    displayName: 'accordion';
-  };
-  attributes: {
-    accordionElements: Schema.Attribute.Component<
-      'elements.accordion-elements',
-      true
-    > &
-      Schema.Attribute.Required;
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-    variant: Schema.Attribute.Enumeration<['default']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'default'>;
-  };
-}
-
 export interface BlocksCard extends Struct.ComponentSchema {
   collectionName: 'components_blocks_cards';
   info: {
@@ -107,6 +88,21 @@ export interface BlocksHero extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksList extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_lists';
+  info: {
+    displayName: 'list';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    listElements: Schema.Attribute.Component<'elements.list-elements', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['accordion', 'card']> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksRichText extends Struct.ComponentSchema {
   collectionName: 'components_blocks_rich_texts';
   info: {
@@ -117,17 +113,6 @@ export interface BlocksRichText extends Struct.ComponentSchema {
     variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
-  };
-}
-
-export interface ElementsAccordionElements extends Struct.ComponentSchema {
-  collectionName: 'components_elements_accordion_elements';
-  info: {
-    displayName: 'accordionElements';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
   };
 }
 
@@ -146,6 +131,18 @@ export interface ElementsInput extends Struct.ComponentSchema {
     type: Schema.Attribute.Enumeration<['email', 'tel', 'text']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'text'>;
+  };
+}
+
+export interface ElementsListElements extends Struct.ComponentSchema {
+  collectionName: 'components_elements_list_elements';
+  info: {
+    displayName: 'listElements';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -202,16 +199,16 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'blocks.accordion': BlocksAccordion;
       'blocks.card': BlocksCard;
       'blocks.carousel': BlocksCarousel;
       'blocks.cta': BlocksCta;
       'blocks.form': BlocksForm;
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
+      'blocks.list': BlocksList;
       'blocks.rich-text': BlocksRichText;
-      'elements.accordion-elements': ElementsAccordionElements;
       'elements.input': ElementsInput;
+      'elements.list-elements': ElementsListElements;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
     }

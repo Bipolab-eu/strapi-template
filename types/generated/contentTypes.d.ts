@@ -393,7 +393,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'blocks.cta',
         'blocks.carousel',
         'blocks.card',
-        'blocks.accordion',
+        'blocks.list',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -433,10 +433,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.hero',
         'blocks.header',
         'blocks.carousel',
-        'blocks.accordion',
         'blocks.card',
         'blocks.cta',
         'blocks.form',
+        'blocks.list',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -488,7 +488,9 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         'blocks.hero',
         'blocks.header',
         'blocks.carousel',
-        'blocks.accordion',
+        'blocks.list',
+        'blocks.form',
+        'blocks.cta',
       ]
     >;
     category: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;

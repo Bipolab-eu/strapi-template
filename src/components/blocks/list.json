@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_blocks_accordions",
+  "collectionName": "components_blocks_lists",
   "info": {
-    "displayName": "accordion"
+    "displayName": "list"
   },
   "options": {},
   "attributes": {
@@ -11,19 +11,20 @@
     "description": {
       "type": "text"
     },
-    "accordionElements": {
+    "listElements": {
       "type": "component",
-      "component": "elements.accordion-elements",
+      "component": "elements.list-elements",
       "repeatable": true,
       "required": true
     },
     "variant": {
       "type": "enumeration",
       "required": true,
-      "default": "default",
       "enum": [
-        "default"
+        "accordion",
+        "card"
       ]
     }
-  }
+  },
+  "config": {}
 }
