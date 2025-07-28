@@ -24,7 +24,8 @@
         }
       },
       "required": true,
-      "unique": true
+      "unique": true,
+      "regex": "^[A-Z].*"
     },
     "slug": {
       "type": "uid",
