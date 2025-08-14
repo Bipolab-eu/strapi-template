@@ -44,10 +44,10 @@
         "blocks.hero",
         "blocks.header",
         "blocks.carousel",
-        "blocks.card",
         "blocks.cta",
         "blocks.form",
-        "blocks.list"
+        "blocks.list",
+        "blocks.infinite-scroll"
       ]
     },
     "seo": {

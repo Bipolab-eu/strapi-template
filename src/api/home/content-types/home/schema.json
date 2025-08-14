@@ -20,8 +20,8 @@
         "blocks.form",
         "blocks.cta",
         "blocks.carousel",
-        "blocks.card",
-        "blocks.list"
+        "blocks.list",
+        "blocks.infinite-scroll"
       ]
     },
     "seo": {

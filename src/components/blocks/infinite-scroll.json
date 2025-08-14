@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_infinite_scrolls",
+  "info": {
+    "displayName": "infinite scroll",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "variant": {
+      "type": "enumeration",
+      "required": true,
+      "default": "default",
+      "enum": [
+        "default"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  },
+  "config": {}
+}

@@ -373,6 +373,46 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
+  collectionName: 'categories';
+  info: {
+    displayName: 'Category';
+    pluralName: 'categories';
+    singularName: 'category';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    label: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
+    posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -392,8 +432,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'blocks.form',
         'blocks.cta',
         'blocks.carousel',
-        'blocks.card',
         'blocks.list',
+        'blocks.infinite-scroll',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -433,10 +473,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'blocks.hero',
         'blocks.header',
         'blocks.carousel',
-        'blocks.card',
         'blocks.cta',
         'blocks.form',
         'blocks.list',
+        'blocks.infinite-scroll',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -493,7 +533,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         'blocks.cta',
       ]
     >;
-    category: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
+    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1284,6 +1324,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::category.category': ApiCategoryCategory;
       'api::home.home': ApiHomeHome;
       'api::page.page': ApiPagePage;
       'api::post.post': ApiPostPost;

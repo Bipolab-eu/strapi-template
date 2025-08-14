@@ -1,18 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface BlocksCard extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_cards';
-  info: {
-    displayName: 'card';
-  };
-  attributes: {
-    posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
-    variant: Schema.Attribute.Enumeration<['default']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'default'>;
-  };
-}
-
 export interface BlocksCarousel extends Struct.ComponentSchema {
   collectionName: 'components_blocks_carousels';
   info: {
@@ -82,6 +69,20 @@ export interface BlocksHero extends Struct.ComponentSchema {
     linkURL: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    variant: Schema.Attribute.Enumeration<['default']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+  };
+}
+
+export interface BlocksInfiniteScroll extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_infinite_scrolls';
+  info: {
+    displayName: 'infinite scroll';
+    icon: 'apps';
+  };
+  attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     variant: Schema.Attribute.Enumeration<['default']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'default'>;
@@ -199,12 +200,12 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'blocks.card': BlocksCard;
       'blocks.carousel': BlocksCarousel;
       'blocks.cta': BlocksCta;
       'blocks.form': BlocksForm;
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
+      'blocks.infinite-scroll': BlocksInfiniteScroll;
       'blocks.list': BlocksList;
       'blocks.rich-text': BlocksRichText;
       'elements.input': ElementsInput;
