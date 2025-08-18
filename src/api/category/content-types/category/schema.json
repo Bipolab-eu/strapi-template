@@ -25,6 +25,16 @@
       "required": true,
       "unique": true
     },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "label",
+      "required": true
+    },
     "posts": {
       "type": "relation",
       "relation": "oneToMany",
