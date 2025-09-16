@@ -24,7 +24,7 @@
       },
       "required": true,
       "unique": true,
-      "regex": "^[a-z]+(-[a-z]+)*$"
+      "regex": "^[a-zñ]+(-[a-zñ]+)*$"
     },
     "posts": {
       "type": "relation",
