@@ -1,38 +1,30 @@
 {
-  "collectionName": "components_blocks_heroes",
+  "collectionName": "components_sections_newsletters",
   "info": {
-    "displayName": "hero"
+    "displayName": "newsletter"
   },
   "options": {},
   "attributes": {
     "cover": {
       "type": "media",
       "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
       ]
     },
     "title": {
-      "type": "string",
-      "required": true
-    },
-    "subtitle": {
-      "type": "text"
-    },
-    "linkLabel": {
       "type": "string"
     },
-    "linkURL": {
+    "subtitle": {
       "type": "string"
     },
     "variant": {
       "type": "enumeration",
-      "required": true,
-      "default": "default",
       "enum": [
-        "default"
+        "Subscribe",
+        "Unsubscribe"
       ]
     }
-  }
+  },
+  "config": {}
 }

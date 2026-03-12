@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ui_faq_cards",
+  "info": {
+    "displayName": "faqCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

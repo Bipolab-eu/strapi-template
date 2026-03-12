@@ -11,19 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "blocks": {
-      "type": "dynamiczone",
-      "components": [
-        "blocks.rich-text",
-        "blocks.hero",
-        "blocks.header",
-        "blocks.form",
-        "blocks.cta",
-        "blocks.carousel",
-        "blocks.list",
-        "blocks.infinite-scroll"
-      ]
-    },
     "seo": {
       "type": "component",
       "component": "shared.seo",

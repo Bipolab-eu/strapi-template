@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_elements_list_elements",
+  "collectionName": "components_ui_cards",
   "info": {
-    "displayName": "listElements"
+    "displayName": "card"
   },
   "options": {},
   "attributes": {
-    "thumbnail": {
+    "cover": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -15,8 +15,8 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "excerpt": {
+      "type": "string"
     }
   },
   "config": {}

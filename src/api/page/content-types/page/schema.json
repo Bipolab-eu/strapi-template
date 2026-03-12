@@ -10,19 +10,10 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "required": true,
       "unique": true,
       "regex": "^[A-Z].*"
@@ -32,31 +23,18 @@
       "targetField": "title",
       "required": true
     },
-    "blocks": {
+    "sections": {
       "type": "dynamiczone",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "components": [
-        "blocks.rich-text",
-        "blocks.hero",
-        "blocks.header",
-        "blocks.carousel",
-        "blocks.cta",
-        "blocks.form",
-        "blocks.list",
-        "blocks.infinite-scroll"
+        "sections.hero",
+        "sections.newsletter",
+        "sections.header",
+        "sections.feature",
+        "sections.team"
       ]
     },
     "seo": {
       "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "component": "shared.seo",
       "repeatable": false
     }
