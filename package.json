@@ -15,10 +15,9 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.31.2",
     "@strapi/plugin-seo": "^2.0.8",
-    "@strapi/plugin-users-permissions": "5.31.2",
-    "@strapi/strapi": "5.31.2",
+    "@strapi/plugin-users-permissions": "5.40.0",
+    "@strapi/strapi": "5.40.0",
     "better-sqlite3": "11.3.0",
     "pg": "^8.16.2",
     "react": "^18.0.0",
@@ -35,7 +34,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=18.0.0 <=22.x.x",
+    "node": ">=22.0.0 <=24.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
