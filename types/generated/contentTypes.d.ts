@@ -473,9 +473,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      ['blocks.hero', 'blocks.call-to-action']
-    >;
+    blocks: Schema.Attribute.DynamicZone<['blocks.hero']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -505,9 +503,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      ['blocks.prueba-componente', 'blocks.hero', 'blocks.call-to-action']
-    >;
+    blocks: Schema.Attribute.DynamicZone<['blocks.hero']>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

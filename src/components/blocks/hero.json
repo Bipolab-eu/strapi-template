@@ -7,6 +7,11 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "elements.accordion",
+      "repeatable": true
     }
   },
   "config": {}

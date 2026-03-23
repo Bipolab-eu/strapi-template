@@ -1,29 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface BlocksCallToAction extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_call_to_actions';
-  info: {
-    displayName: 'callToAction';
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-  };
-}
-
 export interface BlocksHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heroes';
   info: {
     displayName: 'hero';
   };
   attributes: {
+    features: Schema.Attribute.Component<'elements.accordion', true>;
     title: Schema.Attribute.String;
   };
 }
 
-export interface BlocksPruebaComponente extends Struct.ComponentSchema {
-  collectionName: 'components_blocks_prueba_componentes';
+export interface ElementsAccordion extends Struct.ComponentSchema {
+  collectionName: 'components_elements_accordions';
   info: {
-    displayName: 'prueba componente';
+    displayName: 'accordion';
   };
   attributes: {
     title: Schema.Attribute.String;
@@ -83,9 +74,8 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'blocks.call-to-action': BlocksCallToAction;
       'blocks.hero': BlocksHero;
-      'blocks.prueba-componente': BlocksPruebaComponente;
+      'elements.accordion': ElementsAccordion;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
     }

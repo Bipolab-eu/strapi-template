@@ -39,18 +39,16 @@
       "target": "api::category.category",
       "inversedBy": "posts"
     },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.hero"
+      ]
+    },
     "seo": {
       "type": "component",
       "component": "shared.seo",
       "repeatable": false
-    },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": [
-        "blocks.prueba-componente",
-        "blocks.hero",
-        "blocks.call-to-action"
-      ]
     }
   }
 }

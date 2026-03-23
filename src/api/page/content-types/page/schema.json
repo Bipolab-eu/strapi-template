@@ -26,8 +26,7 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "blocks.hero",
-        "blocks.call-to-action"
+        "blocks.hero"
       ]
     },
     "seo": {
