@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_prueba_componentes",
+  "info": {
+    "displayName": "prueba componente"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
