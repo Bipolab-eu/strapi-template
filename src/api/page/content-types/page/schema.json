@@ -23,14 +23,10 @@
       "targetField": "title",
       "required": true
     },
-    "sections": {
+    "blocks": {
       "type": "dynamiczone",
       "components": [
-        "sections.hero",
-        "sections.newsletter",
-        "sections.header",
-        "sections.feature",
-        "sections.team"
+        "blocks.hero"
       ]
     },
     "seo": {

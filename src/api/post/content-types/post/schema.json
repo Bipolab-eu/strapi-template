@@ -41,11 +41,7 @@
     },
     "sections": {
       "type": "dynamiczone",
-      "components": [
-        "ui.faq-card",
-        "ui.card",
-        "ui.button"
-      ]
+      "components": []
     },
     "seo": {
       "type": "component",
